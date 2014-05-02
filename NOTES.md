@@ -6,7 +6,8 @@ AVALANCHE OF TERRIBLE NOTES FOR MY DEVICT TALK - AUTOMATING GIMP WITH PYTHON
 
 2 approaches to using Python to automate GIMP
 * Script-Fu - Scheme-based extension language implemented using TinyScheme
-* GIMP-Python - set of Python modules acting as a wrapper to libgimp for authoring GIMP plug-ins.  Similar to Script-Fu, but you can use the full set of Python extension modules from the plug-in
+* Python-Fu - You guessed it - 
+* GIMP-Python - set of Python modules acting as a wrapper to libgimp for authoring GIMP plug-ins.  Similar to Script-Fu, but you can use the full set of Python extension modules from the plug-in.  At least one of them is written in C, but it all appears to be included on GIMP for Linux and PC.  You'll just need to make sure you have Python installed and configured correctly.  On Linux, it's probably already installed :)
 
 Other approaches to automating GIMP
 * You could also script with Perl or Tcl - but I have no idea about that stuff.  Not as much info after GIMP-Python gained in popularity.
