@@ -1,2 +1,5 @@
 # temp files
 *.swp
+
+# output directory
+output/

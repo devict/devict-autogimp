@@ -40,6 +40,79 @@ To view GIMP functions at your disposal, go to "Help->Procedure Browser" ... sho
 
 Everything in Gimp, each funtion in a menu,  or field in a dialog, brush name, pattern name etc has its equivalent in the procedure browser
 
+"gimp." allows user to call on GIMP's functionality.  "pdb." opens doors to all procedures exposed by Gimp via the "Procedure Database" ... same content as "Help->Procedure Browser" ... remember to use underscore, as hyphen means subtraction in Python, and as such is not allowed in function names.
+  * As you will likely tire of prepending "gimp.pdb." to everything, try assigning an alias like 
+  ```
+  >>>g = gimp.pdb
+  ```
+    * might make more sense to limit this shortcut to scripts, as you lose TAB autocomplete or function listing from the console if alias is used.
+
+-------------------------------
+
+## Scripting
+### Where to save your script
+Typically store them locally, available only to your user profile "~/.gimp-x.x/plug-ins/"
+  * On Linux, make sure your script has execute permissions 
+  ```
+  >chmod u+x example1.py
+  ```
+### Plugin Registration
+Without registering, GIMP will not load the plugin, as it will not know where to put it or how to run it.
+
+Skeleton of basic GIMP Python script:
+```python
+#!/usr/bin/env python
+
+# This tells Python to load the Gimp module 
+from gimpfu import *
+
+# This is the function that will perform actual actions
+def my_script_function() :
+    print "Hello from my script!"
+    return
+
+# This is the plugin registration function
+# I have written each of its parameters on a different line 
+register(
+    "my_first_script",    
+    "My first Python-Fu",   
+    "This script does nothing and is extremely good at it",
+    "Michel Ardan", 
+    "Michel Ardan Company", 
+    "April 2010",
+    "<Image>/MyScripts/My First Python-Fu", 
+    "*", 
+    [], 
+    [],
+    my_script_function,
+    )
+
+main()
+```
+NOTE: You *only* need to restart GIMP if you change the registration function.  Other changes can be tested without restarting GIMP.
+  * TODO - SCREENSHOT OF THIS EXAMPLE
+
+In register function example, in order
+
+1. plugin's main function name - as found by GIMP's Procedure Browser
+  1. can be called by other plugins using this name, even in languages other than Python.
+1. Plugin's documentation name, also appears in browser, should briefly describe your plugin
+1. Plugin's Help, more detailed description
+1. Author's name
+1. Any Copyright info
+1. Date released
+1. Path in the Menu where your plugin should be found
+1. Image types supported by your plugin
+1. results sent back by your plugin
+
+Specifically, regarding the Menu path - if you don't specify it correctly, you won't be able to find a menu for your plugin.
+  * You could put it in the Filters menu by changing it to 
+
+  ```
+  "<Image>"/Filters/MyScripts/My First Python-Fu
+  ```
+
+
 -------------------------------
 
 VOCAB
