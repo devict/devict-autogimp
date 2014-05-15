@@ -103,6 +103,7 @@ In register function example, in order
 1. Date released
 1. Path in the Menu where your plugin should be found
 1. Image types supported by your plugin
+1. Input parameters - TODO: email author about this missing definition
 1. results sent back by your plugin
 
 Specifically, regarding the Menu path - if you don't specify it correctly, you won't be able to find a menu for your plugin.
@@ -111,6 +112,49 @@ Specifically, regarding the Menu path - if you don't specify it correctly, you w
   ```
   "<Image>"/Filters/MyScripts/My First Python-Fu
   ```
+  * Other options instead of <Image> include Toolbox, Layers, Channels, Vectors, Colormap, Load, Save, Brushes, Gradients, Palettes, Patterns and Buffers
+  * Possible Image types are * for all, RBG, RGBA, GRAY, or INDEXED
+  * to support both RBG and RGBA, you can write "RGB*"
+  * Even if you provide [], empty list of parameters, GIMP automatically adds 3 parameters
+    * 2nd is current image, third is current drawable object/layer
+    * first is "run mode" - either "RUN-NONINTERACTIVE" or "RUN-INTERACTIVE" ... we'll focus on the former
+    * if you define a Toolbox menu entry, only run-mode param is required, meaning your plugin will not require an image, but will perhaps generate an image
+
+Modified first plugin example - allowing user to input values:
+```python
+#!/usr/bin/env python
+
+
+# This tells Python to load the Gimp module 
+from gimpfu import *
+
+# This is the function that will perform actual actions
+def my_script_function(image, drawable, text_value, int_value) :
+    print "Hello from my script!"
+    print "You sent me this text: "+text_value
+    print "You sent me this number: %d"%int_value
+    return
+
+# This is the plugin registration function
+register(
+    "my_first_script",    
+    "My first Python-Fu",   
+    "This script does nothing and is extremely good at it",
+    "Michel Ardan", 
+    "Michel Ardan Company", 
+    "April 2010",
+    "<Image>/MyScripts/My First Python-Fu", 
+    "*", 
+    [
+      (PF_STRING, 'some_text', 'Some text input for our plugin', 'Write something'),
+      (PF_INT, 'some_integer', 'Some number input for our plugin', 2010)
+    ], 
+    [],
+    my_script_function,
+    )
+
+main()
+```
 
 
 -------------------------------
