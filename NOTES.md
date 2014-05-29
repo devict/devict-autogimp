@@ -36,6 +36,10 @@ Python 2.7.6 (default, Mar 22 2014, 22:59:56)
 
 To view GIMP functions at your disposal, go to "Help->Procedure Browser" ... should be consistent with function names accross Script-Fu, Gimp-Perl or other Gimp scripts.  For Python-Fu scripts, however, you'll need to replace hyphens "-" with underscore
 
+A few gotchas while playing with gimp.pdb.file_png_save 
+  * Omit the first (run-mode) parameter in your scripts, it's implicitly handled in pygimp
+  * It does not like it when you offer "~/" as part of a path param.  Use os.path.expanduser(~/Desktop) to create path to user desktop which will by usable by pygimp scripts 
+
 -------------------------------
 
 Everything in Gimp, each funtion in a menu,  or field in a dialog, brush name, pattern name etc has its equivalent in the procedure browser
@@ -170,3 +174,4 @@ Images - containers for layers, other objects like channels, paths, selections..
 
 ## Links
 http://www.gimp.org/docs/python/index.html
+http://www.w3.org/TR/PNG-Chunks.html
