@@ -9,7 +9,9 @@ def start_the_mill(file_path, size_list) :
     # transmit error messages to gimp console
     gimp.pdb.gimp_message_set_handler( ERROR_CONSOLE )
 
-    image = pdb.gimp_file_load(file_path, file_path)
+    full_path = os.path.expanduser(file_path)
+
+    image = pdb.gimp_file_load(full_path, full_path)
     drawable = pdb.gimp_image_get_active_layer(image)
     original = image
 
