@@ -14,7 +14,28 @@
 * [Gimp Basic Batch guide](http://www.gimp.org/tutorials/Basic_Batch/)
 
 
-# TODO - Link dump from the guides I favorited and organized as such after my talk
+# ~~TODO~~ - Link dump from the guides I favorited and organized as such after my talk
+
+* [Gimp Scripting: Python objects in practice](http://gimpbook.com/scripting/slides30/pyobjectcode.html)
+* [audreyr's cheat sheet to favicon sizes/types](https://github.com/audreyr/favicon-cheat-sheet)
+* [Making multi-resolution favicons in GIMP - Clara Tse](http://kirinyan.net/making-multi-resolution-favicons-in-gimp/)
+* [Python Programming/Functions - en.wikibooks.org](http://en.wikibooks.org/wiki/Python_Programming/Functions)
+* [Gimp Script: Save as PNG - defron.org](http://blog.defron.org/2013/01/gimp-script-save-as-png.html)
+* [PNG Specification - libpng.org](http://www.libpng.org/pub/png/spec/iso/)
+* [PNG Specification - w3.org](http://www.w3.org/TR/PNG-Chunks.html)
+* [GIMP Resize Script example in Python-fu - zwell.net](http://zwell.net/content/pygimp.html)
+* [Python os.path - docs.python.org](https://docs.python.org/2/library/os.path.html)
+* [Other os.path guide that answered a few questions for me - effbot.org](http://effbot.org/librarybook/os-path.htm)
+* [Stack Overflow question whose answer served as a good, concise guide to creating a GIMP batch script](https://stackoverflow.com/questions/12662676/writing-a-gimp-python-script/12663785#12663785)
+* [Script-fu tutorial in case you really really like Scheme - seul.org](http://www.seul.org/~grumbel/gimp/script-fu/script-fu-tut.html)
+* [Gimp Python Documentation, very broad overview - gimp.org](http://www.gimp.org/docs/python/)
+* [Gimp function reference, so you know what's possible to script! - gimp.cp-dev.com](http://gimp.cp-dev.com/manual/gimp-function-reference.html)
+* [Stack Overflow question about using split to parse string of comma-separated values, as we did in the demo.](http://stackoverflow.com/questions/3477502/pythonic-method-to-parse-a-string-of-comma-separated-integers-into-a-list-of-i)
+* [Sorting in Python](https://wiki.python.org/moin/HowTo/Sorting)
+* [GIMP Library Reference Manual entry for image scale - developer.gimp.org](http://developer.gimp.org/api/2.0/libgimp/libgimp-gimpimage.html#gimp-image-scale)
+* [GIMP Library Reference Manual, so you know what you can script! - developer.gimp.org](http://developer.gimp.org/api/2.0/libgimp/index.html)
+* [GIMP Batch Mode - gimp.org](http://www.gimp.org/tutorials/Basic_Batch/)
+* [Thread about chasing down what version of Python GIMP is using](http://gimpforums.com/thread-python-fu-no-show-mac)
 
 ## Addressing questions that came up during the talk
 
