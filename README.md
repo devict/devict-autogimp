@@ -1,6 +1,7 @@
 # devict-autogimp
 
 *Official cradle and final resting place of content for my devICT talk "Automating GIMP using Python"*
+* [Youtube Link](https://www.youtube.com/watch?v=Z-_B2lqrvpY)
 
 ## Credits and links
 **[Frédéric Jaume](http://www.exp-media.com/)** - *I basically ended up duplicating his blog posts when I got started, and summarized them as I continued to find them in my Google searches!  He said that was OK, and I promised to link him and his helpful guides!!*
