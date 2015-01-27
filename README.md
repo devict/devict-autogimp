@@ -28,6 +28,10 @@ pygtk.require('2.0')
 import gimpui
 import gtk
 ```
+*    Maybe that wasn't what you're after?  What about this business??!?
+   * [Section 3 of Writing a Plug-in from developer.gimp.org](http://developer.gimp.org/writing-a-plug-in/3/)
+   * [Template script demonstrating all "included" GUI building options](http://gimpbook.com/scripting/gimp-script-templates/pyui.py)
+
 **Dominic Canare - again - can you modify raster images etc... basically draw programmatically**
 
 *    Pretty much any gimp procedure can be done via plugin, AFAIK.  Here's a possible example?
